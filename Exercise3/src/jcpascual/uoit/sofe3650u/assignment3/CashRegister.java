@@ -12,16 +12,14 @@ public class CashRegister {
         observers = new ArrayList<>();
     }
 
-    public void addObserver(IRegisterObserver observer)
-    {
+    public void addObserver(IRegisterObserver observer) {
         observers.add(observer);
     }
 
     public void setCurrentProductUpc(String upc) {
         currentProduct = productDb.getProductInfo(upc);
 
-        for (IRegisterObserver observer : observers)
-        {
+        for (IRegisterObserver observer : observers) {
             observer.productUpdated(currentProduct);
         }
     }
