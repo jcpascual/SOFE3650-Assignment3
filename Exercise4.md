@@ -4,7 +4,7 @@
 
 Approach One is easy to implement. However, it is not easily extendable as the ``CashRegister`` class contains an instance variable for each View and depends on each individual View's operators. 
 
-## Two.
+## Two
 
 The second approach allows the ``CashRegister`` to not depend on the operators of the View classes. However, ``CashRegister`` is still dependant on the pre-defined View classes (``Display`` and ``TicketPrinter``), as each one has its own instance variable.
 
